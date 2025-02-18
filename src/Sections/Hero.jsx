@@ -12,16 +12,16 @@ const Hero = () => {
     <section className="relative w-full h-screen">
       <Navbar className="z-10" />
       <div className=" absolute w-full h-full  ">
-        <Confession className="z-20" />
-        <Canvas className="w-full h-screen   hidden ">
+        
+        <Canvas className="w-full h-screen    ">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
             <Chair
-              scale={0.04}
+              scale={0.06}
               position={[0, -0.5, 25]}
               rotation={[-1.3, 0, 3.1]}
             />
-
+            <Confession className="z-20" />
             <directionalLight intensity={10} position={[5, 10, 5]} />
           </Suspense>
         </Canvas>
