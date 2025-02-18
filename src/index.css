@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@layer base{
+    @font-face {
+        font-family: 'victor-medium';
+        src: url('/fonts/VictorMono-Medium.woff2') format('woff2');
+    }
+    @font-face {
+        font-family: 'victor-regular';
+        src: url('/fonts/VictorMono-Regular.woff2') format('woff2');
+    }
+}
+
+
+@layer utilities {
+
+    .item-nav {
+        @apply border-r w-[25%] py-2 h-full flex  items-center justify-center bg-black text-white;
+      }
+    .item-nav-2{
+        @apply w-[20%] h-full py-2 flex items-center justify-center bg-black text-white hover:bg-white;
+    }
+    .confess-tab{
+        @apply absolute  top-[40%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]  text-center;
+    }
+}
+
+
+@theme {
+    --font-victor-medium: victor-medium, sans-serif;
+    --font-victor-regular: victor-regular, sans-serif;
+  
+  
+}
+
