@@ -11,17 +11,57 @@
 }
 
 
+
+.special-div {
+    width: 200px;
+    height: 200px;
+    box-shadow:
+    inset 60px 450px 1000px #050301,
+     inset -60px -450px 1000px #373534;
+    transition: box-shadow 0.5s ease-in;
+  }
+  
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .hover-underline-animation.left::after {
+    transform-origin: bottom right;
+  }
+  
+  .hover-underline-animation.left:hover::after {
+    transform-origin: bottom left;
+  }
+
+
 @layer utilities {
 
     .item-nav {
-        @apply border-r w-[25%] py-2 h-full flex  items-center justify-center bg-black text-white;
+        @apply  w-[25%] py-5 h-full flex  items-center justify-center bg-transparent text-white  ;
       }
-    .item-nav-2{
-        @apply w-[20%] h-full py-2 flex items-center justify-center bg-black text-white hover:bg-white;
-    }
+
     .confess-tab{
-        @apply absolute  top-[40%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]  text-center;
+        @apply absolute    left-[50%] transform translate-x-[-50%] translate-y-[-30%]  text-center;
     }
+    
 }
 
 
