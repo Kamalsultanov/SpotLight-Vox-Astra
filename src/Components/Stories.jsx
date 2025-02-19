@@ -22,18 +22,15 @@ export default function StoriesPage() {
 
   return (
     <div className="w-screen h-screen overflow-hidden bg-white flex flex-col items-center justify-center relative">
-      {/* Navbar */}
       <nav className="absolute top-0 w-full p-5 bg-white shadow-md flex justify-center">
         <h1 className="text-3xl font-bold text-blue-800">Survivor Stories</h1>
       </nav>
 
-      {/* Page Heading */}
       <div className="mt-24 mb-10 text-center">
         <h2 className="text-4xl font-bold text-gray-800">Stories of Strength & Resilience</h2>
         <p className="text-gray-600 mt-2 text-lg">Read the inspiring journeys of survivors who overcame adversity.</p>
       </div>
 
-      {/* Horizontal Scroll Section */}
       <div
         ref={scrollRef}
         className="w-full h-[500px] flex overflow-x-auto space-x-6 px-10 scrollbar-hide touch-none"

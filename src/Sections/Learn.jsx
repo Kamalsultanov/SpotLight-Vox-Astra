@@ -8,13 +8,13 @@ const Learn = () => {
           <div className="  flex items-center justify-center  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-                          fill="#DCDCDC"
-                          width={150}
-              shape-rendering="geometricPrecision"
-              text-rendering="geometricPrecision"
-              image-rendering="optimizeQuality"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fill="#DCDCDC"
+              width={150}
+              shapeRendering="geometricPrecision"
+              textRendering="geometricPrecision"
+              imageRendering="optimizeQuality"
+              fillRule="evenodd"
+              clipRule="evenodd"
               viewBox="0 0 512 391.43"
             >
               <path
