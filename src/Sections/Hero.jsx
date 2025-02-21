@@ -16,7 +16,6 @@ import Confession from "../Components/Confession";
 import { fog } from "three/tsl";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Learn from "./Learn";
 
 const AnimatedFog = ({ isActive }) => {
   const fogRef = useRef();
@@ -65,12 +64,14 @@ const Hero = () => {
       <button
         onClick={handleClick}
         className={`border border-white text-white font-victor-medium absolute top-[40%] p-6 left-[50%]
-         z-50 hover:pointer w-[280px] md:w-[330px] text-[1.4em] confess-tab ${isActive ? "block" : "hidden"} `}
+         z-50 hover:pointer w-[280px] md:w-[330px] text-[1.4em] confess-tab ${
+           isActive ? "block" : "hidden"
+         } `}
       >
         Do you wanna hear?
       </button>
-      <div className="  w-full h-[100vh] bg-[#DCDCDC] hidden ">
-        <Canvas className="w-full h-full special-div  ">
+      <div className="  w-full h-[100vh] bg-[#DCDCDC]  ">
+        <Canvas className="w-full h-full special-div hidden ">
           <Suspense fallback={<CanvasLoader />}>
             <Confession isActive={isActive} />
             <AnimatedFog isActive={isActive} />
@@ -84,7 +85,6 @@ const Hero = () => {
           </Suspense>
         </Canvas>
       </div>
-        <Learn/>
     </section>
   );
 };

@@ -52,6 +52,22 @@
   }
 
 
+
+  .learn-tab:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    opacity: 30%;
+    bottom: 0;
+    transition: height 0.3s ease-out;
+    background: linear-gradient(to bottom, transparent 0%, rgb(164, 161, 161) 100%);
+  }
+  .learn-tab:hover:before {
+    height: 70%;
+  }
+
 @layer utilities {
 
     .item-nav {
@@ -62,6 +78,11 @@
         @apply absolute    left-[50%] transform translate-x-[-50%] translate-y-[-30%]  text-center;
     }
     
+
+    .learn-tab{
+      @apply w-[80%] mx-auto md:mx-0 my-2   md:w-[25%] h-[250px] md:h-[500px] bg-[#1a1919] flex flex-col items-center justify-center rounded-md relative
+      
+    }
 }
 
 

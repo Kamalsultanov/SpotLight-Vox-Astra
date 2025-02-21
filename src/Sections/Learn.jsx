@@ -1,47 +1,50 @@
+import { image } from "framer-motion/client";
 import React from "react";
 
 const Learn = () => {
+  const arr = [
+    {
+      title: "Listen",
+      description:
+        " Listening is the first step to healing. Support survivors by offering a safe space, understanding, and compassion.",
+      image: "/icons/ear.png",
+    },
+    {
+      title: "Speak",
+      description:
+        "Your voice matters. Encourage survivors to speak up by creating a safe and supportive environment.",
+      image: "/icons/speaking.png",
+    },
+    {
+      title: "Look",
+      description:
+        "Pay attention to the signs—abuse isn’t always visible. Being observant and aware can help protect and support those in need.",
+      image: "/icons/eye.png",
+    }
+  ]
+
+
   return (
-    <section className="h-[80vh] w-full bg-gradient-to-r from-[#1f1e1e] to-[#3b3b3b]">
-      <div className="w-full flex gap-3 p-4">
-        <div className=" w-[20%] h-[500px]  bg-[#1a1919] items-center justify-center rounded-md">
-          <div className="  flex items-center justify-center  ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#DCDCDC"
-              width={150}
-              shapeRendering="geometricPrecision"
-              textRendering="geometricPrecision"
-              imageRendering="optimizeQuality"
-              fillRule="evenodd"
-              clipRule="evenodd"
-              viewBox="0 0 512 391.43"
-            >
-              <path
-                d="M189.837 19.888c7.135-2.946 14.332-5.824 21.604-8.475 7.387-2.693 14.955-5.194 22.78-7.364C243.907 1.362 249.288.06 255.356.002c6.142-.059 11.401 1.123 20.953 3.4 13.842 3.301 27.007 7.387 39.454 12.288 12.516 4.927 24.22 10.649 35.067 17.192 21.74 13.117 37.786 26.805 50.02 43.446 10.154 13.815 17.512 
-                      29.458 23.157 48.302 12.199-3.558 24.061-4.591 35.002-2.809 14.84 2.419 27.814 9.857 37.554 22.982a79.613 79.613
-                       0 015.186 7.887c9.515 16.611 12.312 35.484 8.783 53.136-3.532 17.676-13.418 34.134-29.254 45.887a80.26 80.26 0 01-7.969 5.234c-8.549 4.896-17.997
-                       7.508-28.676 7.617-6.97.07-14.385-.947-22.339-3.114a308.817 308.817 0 01-8.084
-                       22.983c-13.858 35.007-34.52 61.772-61.35 79.842-26.773 18.03-59.476 27.228-97.474 27.154-56.479-.113-101.215-25.751-131.637-63.854-15.436-19.334-27.151-41.888-34.804-65.92-7.666 2.025-14.827 2.976-21.576 2.909-10.678-.109-20.126-2.72-28.678-7.617a81.014 81.014 0 01-7.969-5.233C14.885 239.96 5 223.504 1.468 205.826c-3.529-17.653-.732-36.527 8.783-53.138 1.484-2.594 3.216-5.229 5.186-7.885 9.742-13.125
-                        22.717-20.563 37.555-22.982 11.498-1.873 24.014-.636 36.866 3.372 15.834-45.001 48.395-83.999 99.979-105.305zm-1.007 138.299c9.396 0 17.013 7.617 17.013 17.013s-7.617 17.014-17.013 17.014-17.014-7.618-17.014-17.014c0-9.396 
-                       7.618-17.013 17.014-17.013zm32.78 130.761c-4.67.495-8.861-2.889-9.357-7.56a8.508 8.508 0 017.56-9.357 
-                      336.51 336.51 0 0138.301-1.883c12.862.092 25.518.882 37.969 2.312 4.671.532 8.025 4.753 7.493 9.424-.533 4.67-4.754 8.024-9.424 7.492-12.123-1.392-24.167-2.16-36.105-2.245a319.959 319.959 0 00-36.437 1.817zm104.249-130.761c9.396 0 17.013 7.617 17.013 17.013s-7.617 17.014-17.013 17.014c-9.397 0-17.014-7.618-17.014-17.014 0-9.396 7.617-17.013 17.014-17.013zm-51.961 42.917a6.437 6.437 0 11.001 12.875 6.437 6.437 0 01-.001-12.875zm-31.574 0a6.437 6.437 0 110 12.875 6.437 6.437 0 010-12.875zm177.243 25.141c14.38 4.932 25.562 4.382 34.898-.822 24.588-13.699 30.194-35.694 13.897-57.06-11.14-14.603-29.654-16.504-49.304-8.721 5.693
-                       21.951.476 66.761.509 66.603zM181.504 88.715c32.656-3.323 46.28 10.41 70.974 12.198 9.666-.514 19.242-.224 27.84-3.088 7.396-2.462 14.862-4.83
-                       22.652-6.765 25.346-6.299 42.834-3.365 65.629 10.871 3.643 2.275 7.028 4.785 10.131 7.55 12.171 10.852 19.999 25.646 22.055 45.68
-                       2.312 37.141-12.585 62.547-43.712 76.886 23.454 64.462 7.347 107.651-67.909 119.035-61.294 7.321-148.442-5.355-141.004-85.154 1.135-12.164 4.633-23.833 10.26-35.052-72.336-35.186-47.859-134.942 23.084-142.161zm-89.671 137.53c-14.38 4.932-25.562 
-           4.382-34.899-.822-24.588-13.699-30.192-35.694-13.896-57.06 11.14-14.603 29.654-16.504 49.303-8.721-5.693 21.951-.475 66.761-.508 66.603z"
-              />
-            </svg>
+    <section id="learn" className="min-h-[80vh] w-full bg-gradient-to-r from-[#1f1e1e] to-[#3b3b3b]">
+      <div className="text-white w-full flex justify-center font-victor-medium text-3xl p-8 ">
+        <h3><span className="underline">Learn</span> what actions you can take.</h3>
+      </div>
+
+      <div className="w-full md:flex gap-3 justify-center p-4">
+      {arr.map((item, index) => (
+        <div 
+          key={index} 
+          className="learn-tab"
+        >
+          <div className="flex items-center justify-center">
+            <img src={item.image} alt={item.title} className="w-[80px] h-auto" />
           </div>
-          <div className="text-[#DCDCDC] font-victor-regular text-center">
-            <h1 className="font-victor-medium text-2xl ">Listen</h1>
-            <p className="text-sm px-6 py-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reprehenderit, quaerat cum a repellat quas voluptate perspiciatis
-              asperiores unde quo assumenda architecto ducimus nu
-            </p>
+          <div className="text-[#DCDCDC] font-victor-regular text-center my-2">
+            <h1 className="font-victor-medium text-2xl">{item.title}</h1>
+            <p className="text-sm px-6 py-3">{item.description}</p>
           </div>
         </div>
+      ))}
       </div>
     </section>
   );

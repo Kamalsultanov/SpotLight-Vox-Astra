@@ -10,12 +10,12 @@ const Confession = ({ isActive }) => {
        isActive ? "w-0 " : "w-[280px] "
      } transition-all duration-1500 `}
     >
-      <p className="font-victor-regular text-gray-800  pb-7  max-w-[280px] md:w-[350px]">
+      <p className="font-victor-regular text-gray-800 text-[1.3em]  pb-7  max-w-[280px] md:w-[350px]">
         <span>"</span>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         <span>"</span>
       </p>
-      <span className="text-white font-victor-regular pt-6  w-[340px]">Author</span>
+      <span className="text-white font-victor-regular   w-[340px] text-[1.5em]">Author</span>
     </Html>
   );
 };
