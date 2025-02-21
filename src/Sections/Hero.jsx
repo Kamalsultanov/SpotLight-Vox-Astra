@@ -65,11 +65,11 @@ const Hero = () => {
       <button
         onClick={handleClick}
         className={`border border-white text-white font-victor-medium absolute top-[40%] p-6 left-[50%]
-         z-50 hover:pointer w-[280px] md:w-[330px] confess-tab ${isActive ? "block" : "hidden"} `}
+         z-50 hover:pointer w-[280px] md:w-[330px] text-[1.4em] confess-tab ${isActive ? "block" : "hidden"} `}
       >
         Do you wanna hear?
       </button>
-      <div className="  w-full h-[100vh] bg-[#DCDCDC]  ">
+      <div className="  w-full h-[100vh] bg-[#DCDCDC] hidden ">
         <Canvas className="w-full h-full special-div  ">
           <Suspense fallback={<CanvasLoader />}>
             <Confession isActive={isActive} />

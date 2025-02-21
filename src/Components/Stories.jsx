@@ -26,7 +26,7 @@ export default function StoriesPage() {
         <h1 className="text-3xl font-bold text-blue-800">Survivor Stories</h1>
       </nav>
 
-      <div className="mt-24 mb-10 text-center">
+l      <div className="mt-24 mb-10 text-center">
         <h2 className="text-4xl font-bold text-gray-800">Stories of Strength & Resilience</h2>
         <p className="text-gray-600 mt-2 text-lg">Read the inspiring journeys of survivors who overcame adversity.</p>
       </div>

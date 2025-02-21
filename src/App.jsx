@@ -6,8 +6,6 @@ function App() {
   return (
       <main>
       <Hero />
-      <Learn/>
-          <StoriesPage />
       </main>
   );
 }
