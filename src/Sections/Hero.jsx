@@ -20,6 +20,10 @@ import gsap from "gsap";
 const AnimatedFog = ({ isActive }) => {
   const fogRef = useRef();
 
+
+  
+
+
   useEffect(() => {
     if (fogRef.current) {
       gsap.to(fogRef.current, {
@@ -71,7 +75,7 @@ const Hero = () => {
         Do you wanna hear?
       </button>
       <div className="  w-full h-[100vh] bg-[#DCDCDC]  ">
-        <Canvas className="w-full h-full special-div hidden ">
+        <Canvas className="w-full h-full special-div hidden">
           <Suspense fallback={<CanvasLoader />}>
             <Confession isActive={isActive} />
             <AnimatedFog isActive={isActive} />

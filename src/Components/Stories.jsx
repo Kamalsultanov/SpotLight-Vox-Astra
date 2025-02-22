@@ -1,52 +1,53 @@
-import { useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+import React from 'react'
 
-const stories = [
-  { id: 1, name: "Jane Doe", story: "I overcame great challenges and found hope in the darkest times. My journey has inspired many to seek help and never give up.", image: "https://via.placeholder.com/300" },
-  { id: 2, name: "John Smith", story: "Surviving abuse changed my life. I now advocate for others and help them find their voice.", image: "https://via.placeholder.com/300" },
-  { id: 3, name: "Emily Johnson", story: "Finding strength after trauma was not easy, but with support and resilience, I rebuilt my life.", image: "https://via.placeholder.com/300" },
-  { id: 4, name: "Michael Brown", story: "Healing is possible for everyone. My story proves that we can rise above pain and rediscover happiness.", image: "https://via.placeholder.com/300" },
-];
+const Stories = () => {
 
-export default function StoriesPage() {
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollLeft += 2;
-      }
-    }, 30);
-    return () => clearInterval(interval);
-  }, []);
+  const stories = [
+    { 
+      name: "Oprah Winfrey", 
+      occupation: "Media Mogul, Philanthropist, and Actress", 
+      story: "Oprah Winfrey survived childhood abuse and poverty. She was molested as a child and faced numerous challenges growing up. Despite this, she became one of the most influential media personalities in the world, using her platform to advocate for survivors and support charitable causes." 
+    },
+    { 
+      name: "Rihanna", 
+      occupation: "Singer, Entrepreneur, and Philanthropist", 
+      story: "Rihanna is a survivor of domestic abuse. She has spoken openly about her experience in an abusive relationship, using her story to raise awareness about domestic violence. Through her Clara Lionel Foundation, she supports survivors and funds programs to prevent abuse." 
+    },
+    { 
+      name: "Gabrielle Union", 
+      occupation: "Actress, Author, and Activist", 
+      story: "Gabrielle Union is a survivor of sexual assault, which she experienced as a teenager. She has become a vocal advocate for survivors, sharing her story to break the stigma and push for systemic change. She also works with organizations that support abuse survivors." 
+    },
+    { 
+      name: "Patrick Stewart", 
+      occupation: "Actor and Activist", 
+      story: "Patrick Stewart grew up in a household with domestic abuse, witnessing his father abuse his mother. He has used his platform to speak out against domestic violence, supporting organizations like Refuge and advocating for survivors' rights." 
+    }
+  ];
 
   return (
-    <div className="w-screen h-screen overflow-hidden bg-white flex flex-col items-center justify-center relative">
-      <nav className="absolute top-0 w-full p-5 bg-white shadow-md flex justify-center">
-        <h1 className="text-3xl font-bold text-blue-800">Survivor Stories</h1>
-      </nav>
-
-l      <div className="mt-24 mb-10 text-center">
-        <h2 className="text-4xl font-bold text-gray-800">Stories of Strength & Resilience</h2>
-        <p className="text-gray-600 mt-2 text-lg">Read the inspiring journeys of survivors who overcame adversity.</p>
+    <section id="stories" className='w-full   bg-gradient-to-r from-[#1f1e1e] to-[#3b3b3b]  '>
+       <div className="text-white w-full flex  flex-col text-center justify-center  p-8 ">
+        <h3 className='font-victor-medium text-3xl my-3 '><span className="underline">Stories</span> of resilience and hope. </h3>
+        <p className=' w-full md:w-1/2 mx-auto text-sm  md:text-lg'>These stories remind us of resilience and the need for action. Support survivors, speak out against abuse, and help create a safer world.</p>
       </div>
-
-      <div
-        ref={scrollRef}
-        className="w-full h-[500px] flex overflow-x-auto space-x-6 px-10 scrollbar-hide touch-none"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      >
-        {stories.concat(stories).map((story, index) => (
-          <motion.div
-            key={index}
-            className="min-w-[400px] h-[500px] bg-white shadow-2xl rounded-2xl p-6 flex flex-col justify-between items-center border border-gray-300 transition-all duration-300 hover:shadow-xl hover:scale-105"
-          >
-            <img src={story.image} alt={story.name} className="w-full h-56 object-cover rounded-xl mb-4" />
-            <h2 className="text-2xl font-semibold text-blue-900">{story.name}</h2>
-            <p className="text-gray-600 text-center px-4 text-lg">{story.story}</p>
-          </motion.div>
-        ))}
+      <div id='storiescontainer' className='w-full md:flex items-center justify-center gap-5' >
+             {stories.map((item, index) => (
+                <div 
+                  key={index} 
+                  className="stories-tab text-white"
+                >
+                 <h1 className='text-4xl m-4 font-victor-medium'>{item.name}.</h1>
+                 <h3 className="font-victor-medium mx-4 text-[0.8em]">{ item.occupation}</h3>
+                  
+                  <div className="text-[#DCDCDC] font-victor-regular mx-3 my-4">
+                    <p className=" px-4 py-3 text-lg">{item.story}</p>
+                  </div>
+                </div>
+              ))}
       </div>
-    </div>
-  );
+    </section>
+  )
 }
+
+export default Stories

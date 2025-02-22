@@ -51,6 +51,10 @@
     transform-origin: bottom left;
   }
 
+  
+
+
+
 
 
   .learn-tab:before {
@@ -68,6 +72,14 @@
     height: 70%;
   }
 
+
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
 @layer utilities {
 
     .item-nav {
@@ -75,13 +87,29 @@
       }
 
     .confess-tab{
-        @apply absolute    left-[50%] transform translate-x-[-50%] translate-y-[-30%]  text-center;
+        @apply absolute left-[50%] transform translate-x-[-50%] translate-y-[-15%]  text-center;
     }
     
 
     .learn-tab{
       @apply w-[80%] mx-auto md:mx-0 my-2   md:w-[25%] h-[250px] md:h-[500px] bg-[#1a1919] flex flex-col items-center justify-center rounded-md relative
       
+    }
+    .stories-tab{
+      @apply w-[80%] mx-auto md:mx-0 mt-4   md:w-[23%] min-h-[500px] md:h-[500px] bg-[#1a1919] flex flex-col   rounded-md relative
+      
+    }
+    .donate-tab{
+      @apply  w-[90%] md:w-[30%] text-white text-[10em] px-4 flex items-center justify-center bg-[#616060] mx-auto rounded-3xl drop-shadow-2xl;
+    }
+    .donate-options-container{
+      @apply w-[90%] md:w-[30%] text-white  mt-10  h-[100px] flex p-3  items-center justify-between bg-[#616060] mx-auto rounded-3xl drop-shadow-2xl;
+    }
+    .donate-options{
+      @apply   bg-[#1a1919] p-3 w-[30%]  text-center text-[1.2em] rounded-2xl drop-shadow-lg hover:bg-white hover:text-[#616060] transition-all duration-300 ; 
+    }
+    .donate-button{
+      @apply  w-[90%] md:w-[30%] text-[1a1919] text-[2em] px-4 flex items-center justify-center bg-[#616060] mx-auto mt-10 rounded-3xl drop-shadow-2xl;
     }
 }
 
