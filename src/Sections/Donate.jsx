@@ -14,11 +14,11 @@ const Donate = () => {
         </h3>
       </div>
 
-      <div className="p-6">
+      <div className=" p-5 md:flex md:w-[90%] items-center ">
         <div className="donate-tab">
           <BiDonateHeart />
         </div>
-        <div>
+        <div className="w-[60%] md:flex">
           <ul className="donate-options-container">
             <li className="donate-options">10$</li>
             <li className="donate-options">20$</li>

@@ -100,16 +100,16 @@
       
     }
     .donate-tab{
-      @apply  w-[90%] md:w-[30%] text-white text-[10em] px-4 flex items-center justify-center bg-[#616060] mx-auto rounded-3xl drop-shadow-2xl;
+      @apply  w-[90%] md:w-[30%]  text-white text-[10em] px-4 flex items-center justify-center bg-[#616060] mx-auto rounded-3xl drop-shadow-2xl;
     }
     .donate-options-container{
-      @apply w-[90%] md:w-[30%] text-white  mt-10  h-[100px] flex p-3  items-center justify-between bg-[#616060] mx-auto rounded-3xl drop-shadow-2xl;
+      @apply w-[90%] md:w-[90%] text-white  mt-10   p-3  items-center justify-between bg-[#616060] mx-auto rounded-3xl drop-shadow-2xl;
     }
     .donate-options{
-      @apply   bg-[#1a1919] p-3 w-[30%]  text-center text-[1.2em] rounded-2xl drop-shadow-lg hover:bg-white hover:text-[#616060] transition-all duration-300 ; 
+      @apply   bg-[#1a1919] p-3 w-[90%] m-3  text-center text-[1.2em] rounded-2xl drop-shadow-lg hover:bg-white hover:text-[#616060] transition-all duration-300 ; 
     }
     .donate-button{
-      @apply  w-[90%] md:w-[30%] text-[1a1919] text-[2em] px-4 flex items-center justify-center bg-[#616060] mx-auto mt-10 rounded-3xl drop-shadow-2xl hover:bg-white hover:text-[#616060];
+      @apply  w-[90%] md:w-[30%] text-[1a1919] text-[2em] px-4 flex items-center justify-center bg-[#616060] mx-auto mt-10 rounded-3xl drop-shadow-2xl hover:bg-white hover:text-[#616060] md:mx-2;
     }
 }
 
